@@ -4,7 +4,7 @@ PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 # Default property overrides for various function configurations
 # These can be further overridden at runtime in init*.rc files as needed
 #
-ifneq ($(filter niobe,$(TARGET_BOARD_PLATFORM)),)
+ifneq ($(filter anorak niobe,$(TARGET_BOARD_PLATFORM)),)
 PRODUCT_PROPERTY_OVERRIDES += vendor.usb.rndis.func.name=rndis
 else
 PRODUCT_PROPERTY_OVERRIDES += vendor.usb.rndis.func.name=gsi
